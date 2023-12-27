@@ -2,12 +2,14 @@ import boto3
 import os
 import sys
 from datetime import datetime
+
 aws_access_key_id=os.environ['aws_access_key_id']
 aws_secret_access_key=os.environ['aws_secret_access_key']
-# client = boto3.client('autoscaling')
+
+# Create an AWS ASG client
 client = boto3.client('autoscaling',aws_access_key_id=aws_access_key_id,aws_secret_access_key=aws_secret_access_key,region_name='us-west-1')
+
 def check_asg_instances(asg_name):
-    # Create an AWS Auto Scaling client
     # Describe the Auto Scaling Group
     response = client.describe_auto_scaling_groups(AutoScalingGroupNames=[asg_name])
 
