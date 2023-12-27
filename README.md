@@ -4,6 +4,6 @@
    
    export aws_secret_access_key = "xxxxxxxxx"
 
-2) Boto3 is the name of the Python SDK for AWS. It allows you to directly create, update, and delete AWS resources from your Python scripts
+2) Boto3 is the name of the Python SDK for AWS. It allows us to create, update, and delete AWS resources from Python scripts
    To install boto3 SDK run this command :
    pip3 install boto3
