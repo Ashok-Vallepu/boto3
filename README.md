@@ -23,9 +23,9 @@ Calculate the total number of instances launched and terminated on the current d
 Perform below steps before executing the scripts
 1) The following examples show how you can configure environment variables
    
-   export aws_access_key_id = "xxxxxxxxx"
+   export aws_access_key_id = "xxxxxxxxxJSVR"
    
-   export aws_secret_access_key = "xxxxxxxxx"
+   export aws_secret_access_key = "xxxxxxxxxUn3m"
 
 2) Boto3 is the name of the Python SDK for AWS. It allows us to create, update, and delete AWS resources from Python scripts
    To install boto3 SDK run this command :
