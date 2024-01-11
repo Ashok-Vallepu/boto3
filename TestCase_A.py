@@ -23,7 +23,7 @@ def check_asg_instances(asg_name):
     print(f"Desired capacity matches the actual number of running instances in {asg_name}.")
     return response
 
-def create_or_update_asg(asg_name, min_size, max_size, desired_capacity, subnet_ids):
+def check_asg_instances_az_distribution(asg_name, min_size, max_size, desired_capacity, subnet_ids):
     # Create or update the Auto Scaling Group
     client.create_auto_scaling_group(
         AutoScalingGroupName=asg_name,
@@ -97,12 +97,7 @@ if __name__ == "__main__":
         # Add corrective action here, e.g., send an alert, terminate instances, adjust desired capacity, etc.
         exit(1)
     # ass 2
-    # Replace with your Auto Scaling Group configuration
-    min_size = 1
-    max_size = 1
-    desired_capacity = 1
-    subnet_ids = ['subnet-abc123', 'subnet-def456', 'subnet-ghi789']  # Replace with your subnet IDs
-    create_or_update_asg(asg_name, min_size, max_size, desired_capacity, subnet_ids)
+    check_asg_instances_az_distribution(asg_name)
     # ass 3
     try:
         check_asg_instances_resource_id(asg_name)
